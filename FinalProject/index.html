@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Eha-Project</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" type="text/css" href="css/all.min.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">   
+    </head>
+    <body>
+        
+        <div id="container">
+            <div id="one">
+                <div id="personal-info">
+                    <img src="images/MYPIX.jpg">
+                 <h1><strong>Bilqisu </strong>Ismail</h1>
+                 <ul>
+                    <li>+2348029270168</li>
+                    <li><a href="ismail.bilkisu@gmail.com">ismail.bilkisu@gmail.com</a></li>
+                    <li><a href="ismailbilly.github.io">ismailbilly.github.io</a></li>
+                 </ul>
+                </div>
+             <div id = "theme">
+                <div class="dark-and-light-theme">
+                
+                <i class="fas fa-moon"></i>
+                
+                <input type="checkbox"  onclick = "toggle();" class="checkbox" id="chk" />
+                <label class="label" for="chk">
+                 <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+            
+                </label>
+                <i class="fas fa-sun"></i>
+                
+                
+            </div>
+            <p id="text-changer">Light Mode</p>
+            
+        </div>
+        
+        <!--Introduction -->
+        <div id="secondDiv">
+            <p id="intro">Intro</p>
+            <p class="about-me" style="text-align: center;">I am a strong conceptual thinker who has a keen interest in all things related to the Internet.</p>
+        </div>
+
+        <!--Interest-->
+        <div></div>
+        <div id="thirdDiv">
+            <p id="interest">Interest</p>
+            <p style="text-align: left; padding-left: 30px;">Artificial Intelligence | Web Development | Networking </p>
+        </div>
+
+        <!--Skills -->
+        <div></div>
+        <div id="skills">
+            <p>Skills</p>
+            <div id="icons">
+            <img id ="html-logo" src="images/html logo.png" alt="html-logo">
+            <img id="css-logo" src="images/css logo.png" alt="css-logo">
+            <img id="javascript-logo" src="images/javascript logo.png" alt="javascript-logo">
+            </div>   
+        </div>
+
+        <!-- Career -->
+        <div></div>
+        <div id="career">
+            <p id="career-history">Career History</p>
+            <span style="text-align: left;">
+            <p>Coventry Internet Consultancy -  Web developer  April 2009 – Present</p>
+            <p>Coventry Web Design Company   -  Trainee Web developer June 2008 – April 2009</p>
+            </span>
+        </div>
+        
+        <!--Scroll to top-->
+        <button id="scroll-up">
+        <i class="material-icons">arrow_upward</i>
+        </button>
+    </div>
+    <script>
+          const scrollBtn = document.querySelector("#scroll-up");
+        scrollBtn.addEventListener("click", function(){
+        
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth" 
+            });
+        });
+        var changed = false;
+    
+    function toggle(){
+        if (!changed){
+            changed = true;
+            document.body.classList.toggle('dark');
+             document.getElementById("text-changer").innerHTML = "Dark Mode";
+             //document.body.style.color = "white";
+             
+        }
+            else {
+                changed = false;
+                document.body.classList.toggle('light');
+                document.getElementById("text-changer").innerHTML = "Light Mode";
+            }
+
+    }
+
+    </script>
+    </body>
+</html>
